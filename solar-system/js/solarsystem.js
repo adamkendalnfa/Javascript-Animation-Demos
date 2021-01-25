@@ -286,7 +286,7 @@ const animate = function(){
     saturn.rotateY(0.015);
     saturnGroup.rotateY(0.001);
 
-    uranus.rotateY(0.015);
+    uranus.rotateZ(0.015);
     uranusGroup.rotateY(0.003);
 
     neptune.rotateY(0.015);
