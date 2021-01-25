@@ -147,6 +147,31 @@ const makeSaturnRings = function(){
     return mesh;
 };
 
+// Make Uranus rings
+
+const makeUranusRings = function(){
+    const texture = loader.load("./assets/uranus_rings.jpg");
+    const geometry = new THREE.RingBufferGeometry(40, 45, 64);
+
+    var pos = geometry.attributes.position;
+    var v3 = new THREE.Vector3();
+    for (let i = 0; i < pos.count; i++){
+        v3.fromBufferAttribute(pos, i);
+        geometry.attributes.uv.setXY(i, v3.length() < 41 ? 0 : 1, 1);
+    }
+      
+    const material = new THREE.MeshBasicMaterial({
+        map: texture, 
+        color: 0xffffff, 
+        side: THREE.DoubleSide,
+        transparent: true
+    });
+
+    const mesh = new THREE.Mesh(geometry, material);
+    scene.add(mesh);
+    return mesh;
+}
+
 
 // Create all the objects
 const stars = makeStars();
@@ -205,6 +230,10 @@ saturn.translateX(2000);
 const ring6 = makeRing(2000);
 
 const uranus = makePlanet("./assets/2k_uranus.jpg", 30);
+const uranusRings = makeUranusRings();
+// uranusRings.geometry.rotateX((Math.PI/2)/5);
+uranus.add(uranusRings);
+uranus.rotateY((Math.PI/2));
 const uranusGroup = new THREE.Group(); // Group allows object to rotate around the scene
 uranusGroup.add(uranus);
 scene.add(uranusGroup);
