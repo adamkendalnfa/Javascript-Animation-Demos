@@ -33,7 +33,7 @@ const loader = new THREE.TextureLoader();
 
 // Make star background (large sphere with the texture on the inside)
 const makeStars = function() {
-    const texture = loader.load("../assets/2k_stars.jpg");
+    const texture = loader.load("./assets/2k_stars.jpg");
     const geometry = new THREE.SphereGeometry(5000, 128, 128);
     const material = new THREE.MeshLambertMaterial({
         map: texture
@@ -47,7 +47,7 @@ const makeStars = function() {
 
 // Make Sun
 const makeSun = function() {
-    const texture = loader.load("../assets/8k_sun.jpg");
+    const texture = loader.load("./assets/8k_sun.jpg");
     const geometry = new THREE.SphereGeometry(500, 128, 128);
     const material = new THREE.MeshLambertMaterial({
         // color: 0x2727e6,
@@ -93,7 +93,7 @@ const makeRing = function(width){
 
 // Make asteroid belt (single object)
 const makeAsteroids = function(){
-    const texture = loader.load("../assets/particle.png");
+    const texture = loader.load("./assets/particle.png");
     const geometry = new THREE.Geometry();
     for (let i = 0; i < 1000; i = i + 1){
 
@@ -178,7 +178,7 @@ scene.add(uranusGroup);
 uranus.translateX(2100);
 const ring7 = makeRing(2100);
 
-const neptune = makePlanet("/assets/2k_neptune.jpg", 28);
+const neptune = makePlanet("./assets/2k_neptune.jpg", 28);
 const neptuneGroup = new THREE.Group(); // Group allows object to rotate around the scene
 neptuneGroup.add(neptune);
 scene.add(neptuneGroup);
