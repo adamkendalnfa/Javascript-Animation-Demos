@@ -285,7 +285,7 @@ const animate = function(){
     uranusGroup.rotateY(0.003);
 
     neptune.rotateY(0.015);
-    neptuneGroup.rotateY(0.004);
+    neptuneGroup.rotateY(0.002);
 
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
