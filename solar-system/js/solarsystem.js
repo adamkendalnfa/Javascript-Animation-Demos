@@ -13,7 +13,6 @@ sectionTag.appendChild(renderer.domElement);
 
 // Create scene
 const scene = new THREE.Scene();
-// scene.fog = new THREE.Fog(0x000000, 0.1, 7000); //linear fog, makes things further darker
 
 // Add lighting
 const ambientLight = new THREE.AmbientLight(0x777777);
@@ -50,12 +49,10 @@ const makeSun = function() {
     const texture = loader.load("./assets/2k_sun.jpg");
     const geometry = new THREE.SphereGeometry(500, 128, 128);
     const material = new THREE.MeshLambertMaterial({
-        // color: 0x2727e6,
         map: texture
     })
 
     const mesh = new THREE.Mesh(geometry, material);
-    // mesh.material.side = THREE.BackSide;
     scene.add(mesh);
     return mesh;
 };
@@ -70,7 +67,6 @@ const makePlanet = function(imgPath, radius){
     });
 
     const mesh = new THREE.Mesh(geometry, material);
-
     scene.add(mesh);
     return mesh;
 }
@@ -231,7 +227,6 @@ const ring6 = makeRing(2000);
 
 const uranus = makePlanet("./assets/2k_uranus.jpg", 30);
 const uranusRings = makeUranusRings();
-// uranusRings.geometry.rotateX((Math.PI/2)/5);
 uranus.add(uranusRings);
 uranus.rotateY((Math.PI/2));
 const uranusGroup = new THREE.Group(); // Group allows object to rotate around the scene
@@ -248,7 +243,7 @@ neptune.translateX(2600);
 const ring8 = makeRing(2600);
 
 
-// Hold camera positions
+// Hold camera positions for tweening movement
 let currentX = 0;
 let currentY = 0;
 let aimX = 0;
@@ -278,13 +273,13 @@ const animate = function(){
     earthGroup.rotateY(0.003);
 
     mars.rotateY(0.015);
-    marsGroup.rotateY(0.006);
+    marsGroup.rotateY(0.005);
 
-    jupiter.rotateY(0.015);
+    jupiter.rotateY(0.01);
     jupiterGroup.rotateY(0.002);
 
-    saturn.rotateY(0.015);
-    saturnGroup.rotateY(0.001);
+    saturn.rotateY(0.01);
+    saturnGroup.rotateY(0.0015);
 
     uranus.rotateZ(0.015);
     uranusGroup.rotateY(0.003);
