@@ -79,7 +79,7 @@ const makePlanet = function(imgPath, radius){
 const makeRing = function(width){
     const geometry = new THREE.TorusGeometry(width, 2, 16, 100);
     const material = new THREE.MeshBasicMaterial({
-        color: 0xffffff
+        color: 0xbfbfbf
     })
 
     const mesh = new THREE.Mesh(geometry, material);
