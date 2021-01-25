@@ -1,0 +1,10 @@
+body, html {
+    /* height: 4000px; */
+    height: 100%;
+}
+section {
+    position: fixed;
+}
+canvas{ 
+    vertical-align: bottom;
+}
