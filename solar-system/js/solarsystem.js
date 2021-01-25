@@ -47,7 +47,7 @@ const makeStars = function() {
 
 // Make Sun
 const makeSun = function() {
-    const texture = loader.load("./assets/8k_sun.jpg");
+    const texture = loader.load("./assets/2k_sun.jpg");
     const geometry = new THREE.SphereGeometry(500, 128, 128);
     const material = new THREE.MeshLambertMaterial({
         // color: 0x2727e6,
@@ -77,7 +77,7 @@ const makePlanet = function(imgPath, radius){
 
 // Make rings
 const makeRing = function(width){
-    const geometry = new THREE.TorusGeometry(width, 5, 16, 100);
+    const geometry = new THREE.TorusGeometry(width, 2, 16, 100);
     const material = new THREE.MeshBasicMaterial({
         color: 0xffffff
     })
@@ -129,42 +129,42 @@ const sun = makeSun();
 const asteroids = makeAsteroids();
 asteroids.geometry.rotateZ(Math.PI/2);
 
-const mercury = makePlanet("./assets/8k_mercury.jpg", 20);
+const mercury = makePlanet("./assets/2k_mercury.jpg", 20);
 const mercuryGroup = new THREE.Group(); // Group allows object to rotate around the scene
 mercuryGroup.add(mercury);
 scene.add(mercuryGroup);
 mercury.translateX(600);
 const ring1 = makeRing(600);
 
-const venus = makePlanet("./assets/8k_venus.jpg", 65);
+const venus = makePlanet("./assets/2k_venus.jpg", 65);
 const venusGroup = new THREE.Group(); // Group allows object to rotate around the scene
 venusGroup.add(venus);
 scene.add(venusGroup);
 venus.translateX(750);
 const ring2 = makeRing(750);
 
-const earth = makePlanet("./assets/earth.jpg", 70);
+const earth = makePlanet("./assets/2k_earth.jpg", 70);
 const earthGroup = new THREE.Group(); // Group allows object to rotate around the scene
 earthGroup.add(earth);
 scene.add(earthGroup);
 earth.translateX(950);
 const ring3 = makeRing(950);
 
-const mars = makePlanet("./assets/8k_mars.jpg", 40);
+const mars = makePlanet("./assets/2k_mars.jpg", 40);
 const marsGroup = new THREE.Group(); // Group allows object to rotate around the scene
 marsGroup.add(mars);
 scene.add(marsGroup);
 mars.translateX(1150);
 const ring4 = makeRing(1150);
 
-const jupiter = makePlanet("./assets/8k_jupiter.jpg", 150);
+const jupiter = makePlanet("./assets/2k_jupiter.jpg", 150);
 const jupiterGroup = new THREE.Group(); // Group allows object to rotate around the scene
 jupiterGroup.add(jupiter);
 scene.add(jupiterGroup);
 jupiter.translateX(1500);
 const ring5 = makeRing(1500);
 
-const saturn = makePlanet("./assets/8k_saturn.jpg", 120);
+const saturn = makePlanet("./assets/2k_saturn.jpg", 120);
 const saturnGroup = new THREE.Group(); // Group allows object to rotate around the scene
 saturnGroup.add(saturn);
 scene.add(saturnGroup);
