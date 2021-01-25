@@ -184,7 +184,7 @@ const mercury = makePlanet("./assets/2k_mercury.jpg", 20);
 const mercuryGroup = new THREE.Group(); // Group allows object to rotate around the scene
 mercuryGroup.add(mercury);
 scene.add(mercuryGroup);
-mercury.translateX(600);
+mercury.translateX(-600);
 const ring1 = makeRing(600);
 
 const venus = makePlanet("./assets/2k_venus.jpg", 65);
@@ -201,7 +201,7 @@ earth.add(moon);
 const earthGroup = new THREE.Group(); // Group allows object to rotate around the scene
 earthGroup.add(earth);
 scene.add(earthGroup);
-earth.translateX(950);
+earth.translateX(-950);
 moon.translateX(100);
 const ring3 = makeRing(950);
 
@@ -216,7 +216,7 @@ const jupiter = makePlanet("./assets/2k_jupiter.jpg", 150);
 const jupiterGroup = new THREE.Group(); // Group allows object to rotate around the scene
 jupiterGroup.add(jupiter);
 scene.add(jupiterGroup);
-jupiter.translateX(1500);
+jupiter.translateX(-1500);
 const ring5 = makeRing(1500);
 
 const saturn = makePlanet("./assets/2k_saturn.jpg", 120);
