@@ -33,7 +33,7 @@ const loader = new THREE.TextureLoader();
 // Make star background (large sphere with the texture on the inside)
 const makeStars = function() {
     const texture = loader.load("./assets/2k_stars.jpg");
-    const geometry = new THREE.SphereGeometry(5000, 128, 128);
+    const geometry = new THREE.SphereGeometry(4000, 128, 128);
     const material = new THREE.MeshLambertMaterial({
         map: texture
     })
