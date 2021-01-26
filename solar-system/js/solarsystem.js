@@ -263,29 +263,29 @@ const animate = function(){
     camera.lookAt(scene.position);
     sun.rotateY(0.005);
 
-    mercury.rotateY(0.015);
-    mercuryGroup.rotateY(0.004);
+    mercury.rotateY(0.01);
+    mercuryGroup.rotateY(0.0033);
 
-    venus.rotateY(0.015);
-    venusGroup.rotateY(0.005);
+    venus.rotateY(0.01);
+    venusGroup.rotateY(0.0028);
 
-    earth.rotateY(0.015);
-    earthGroup.rotateY(0.003);
+    earth.rotateY(0.01);
+    earthGroup.rotateY(0.0023);
 
-    mars.rotateY(0.015);
-    marsGroup.rotateY(0.005);
+    mars.rotateY(0.01);
+    marsGroup.rotateY(0.0021);
 
     jupiter.rotateY(0.01);
-    jupiterGroup.rotateY(0.002);
+    jupiterGroup.rotateY(0.0028);
 
     saturn.rotateY(0.01);
     saturnGroup.rotateY(0.0015);
 
     uranus.rotateZ(0.015);
-    uranusGroup.rotateY(0.003);
+    uranusGroup.rotateY(0.0026);
 
-    neptune.rotateY(0.015);
-    neptuneGroup.rotateY(0.002);
+    neptune.rotateY(0.01);
+    neptuneGroup.rotateY(0.0012);
 
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
